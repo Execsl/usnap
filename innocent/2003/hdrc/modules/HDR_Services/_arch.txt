@@ -1,0 +1,9 @@
+
+
+
+
+// pseudo program
+
+
+    ui: ?? bc++, actskin? flash?
+
