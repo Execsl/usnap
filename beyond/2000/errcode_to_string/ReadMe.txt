@@ -1,0 +1,4 @@
+
+
+	LPTSTR LookUpMessage(int msg); 
+
