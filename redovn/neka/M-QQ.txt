@@ -1,0 +1,7 @@
+
+
+
+M-Q/q  quality problem by quantity analyse.
+M-q/Q  quantity analyse by quality analyse.
+
+
