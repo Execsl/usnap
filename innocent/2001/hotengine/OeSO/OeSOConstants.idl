@@ -1,0 +1,19 @@
+
+typedef enum OeSOUnitTypeConstants {
+	OeSOUnitObject, 
+	OeSOUnitInterface, 
+	OeSOUnitClass, 
+	OeSOUnitStatus, 
+	OeSOUnitAttribute, 
+	OeSOUnitMethod, 
+	OeSOUnitEvent, 
+	OeSOUnitObjectsCollection, 
+	OeSOUnitInterfacesCollection, 
+	OeSOUnitClassesCollection, 
+	OeSOUnitStatusesCollection, 
+	OeSOUnitAttributesCollection, 
+	OeSOUnitMethodsCollection, 
+	OeSOUnitEventsCollection, 
+	OeSOUnitApplication
+} OeSOUnitTypeConstantsEnum; 
+
