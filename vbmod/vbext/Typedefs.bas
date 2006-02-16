@@ -14,6 +14,8 @@ Public Enum TypeConstants
     SubType
 End Enum
 
+Public G As New Globals
+
 Public Function ParseType(typeval) As TypeConstants
     On Error GoTo x
     ParseType = TextType
@@ -26,3 +28,4 @@ Public Function ParseType(typeval) As TypeConstants
     Exit Function
 x:
 End Function
+
