@@ -102,5 +102,3 @@ Public Sub Unexpected(Optional msg, Optional loc)
     If IsMissing(loc) Then loc = App.Path
     Err.Raise ERR_UNEXPECTED, loc, "Unexpected" & msg
 End Sub
-
-
