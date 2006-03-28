@@ -66,4 +66,6 @@ Public Function DBConnectFast(Optional ByVal ConnectionString) As DBConnection
     End If
 End Function
 
-
+Public Property Get SQLF() As SQLFunctions
+    Set SQLF = GlobalsSingleton.SQLF
+End Property
