@@ -104,4 +104,3 @@ End Function
 Private Sub Class_Initialize()
     Clear
 End Sub
-

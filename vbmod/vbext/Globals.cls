@@ -150,4 +150,3 @@ End Property
 Public Property Get FSO() As Scripting.FileSystemObject
     Set FSO = Typedefs.FSO
 End Property
-
