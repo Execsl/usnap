@@ -6,14 +6,14 @@ BEGIN
   DataSourceBehavior  = 0  'vbNone
   MTSTransactionMode  = 0  'NotAnMTSObject
 END
-Attribute VB_Name = "SQLF_MySQL"
+Attribute VB_Name = "SQLF_Oracle"
 Attribute VB_GlobalNameSpace = False
-Attribute VB_Creatable = False
+Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
-Attribute VB_Exposed = False
+Attribute VB_Exposed = True
 Option Explicit
 
-Private Const LOCATION                  As String = "DBProxy::SQLF_MySQL"
+Private Const LOCATION                  As String = "DBProxy::SQLF_Oracle"
 
 Implements SQLFunctions
 
@@ -49,8 +49,12 @@ Private Function SQLFunctions_QuoteDateTime(ByVal date_ As Date) As String
     SQLFunctions_QuoteDateTime = SQLF_Default.QuoteDateTime(date_)
 End Function
 
+Private Function SQLFunctions_QuoteDB(ByVal str As String, Optional ByVal dbo As Variant) As String
+    SQLFunctions_QuoteDB = SQLF_Default.QuoteDB(str, dbo)
+End Function
+
 Private Function SQLFunctions_QuoteName(ByVal str As String) As String
-    SQLFunctions_QuoteName = SQLF_Default.QuoteName(str)
+    SQLFunctions_QuoteName = "[" & str & "]"
 End Function
 
 Private Function SQLFunctions_QuoteString(ByVal str As String) As String
@@ -86,18 +90,14 @@ Private Function SQLFunctions_Weekday(ByVal str As String) As String
 End Function
 
 Private Function SQLFunctions_Year(ByVal str As String) As String
-    SQLFunctions_Year = SQLF_Default.Year(str)
+    SQLFunctions_Year = "to_number(substr(to_char(" & str & ",'YYYY-MM-DD'),1,4))"
 End Function
 
 Private Function SQLFunctions_Month(ByVal str As String) As String
-    SQLFunctions_Month = SQLF_Default.Month(str)
+    SQLFunctions_Month = "to_number(substr(to_char(" & str & ",'YYYY-MM-DD'),6,2))"
 End Function
 
 Private Function SQLFunctions_Day(ByVal str As String) As String
-    SQLFunctions_Day = SQLF_Default.Day(str)
-End Function
-
-Private Function SQLFunctions_QuoteDB(ByVal str As String, Optional ByVal dbo As Variant) As String
-    SQLFunctions_QuoteDB = SQLF_Default.QuoteDB(str, dbo)
+    SQLFunctions_Day = "to_number(substr(to_char(" & str & ",'YYYY-MM-DD'),9,2))"
 End Function
 
