@@ -18,7 +18,7 @@ static int stl_test1(stl_project_t *project, stl_token_t *token, x64_t *args) {
     return ret; 
 }
 
-int stl_test(stl_project_t *project) {
+int _cc stl_test(stl_project_t *project) {
     int i; 
     char *pt;
     int c;
@@ -128,14 +128,14 @@ int stl_test(stl_project_t *project) {
     return project->total - project->succeeds; 
 }
 
-void stl_report(stl_project_t *project) {
+void _cc stl_report(stl_project_t *project) {
     int i;
     char namebuf[100]; 
 
     if (project->total != project->succeeds) {
         printf("Failure: \n"); 
         for (i = 0; i < project->ntokens; i++) {
-            char c = project->tokens[i].cmd; 
+            char c = project->tokens[i].cmd;
             sprintf(namebuf, "%s(%s)", 
                     project->tokens[i].name,
                     project->tokens[i].args); 
