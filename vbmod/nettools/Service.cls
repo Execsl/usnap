@@ -248,4 +248,3 @@ Private Sub m_sd_strings_OnStringReceived(ByVal xSocket As Object, ByVal sString
     
     s.ProcessCommand Cmd
 End Sub
-
