@@ -27,3 +27,6 @@ Public Sub tt2()
     i = f.NextPacketInQueue
 End Sub
 
+Public Sub tt3()
+    ShowResources
+End Sub
