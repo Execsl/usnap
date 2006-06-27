@@ -22,3 +22,10 @@ Public Property Get Secret(Optional ByVal MinLen As String = 4, _
     Secret = GlobalsSingleton.Secret(MinLen, MaxLen)
 End Property
 
+Public Sub SecretRandomize(Optional Number)
+    If IsMissing(Number) Then
+        Randomize
+    Else
+        Randomize Number
+    End If
+End Sub

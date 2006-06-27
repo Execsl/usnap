@@ -50,5 +50,3 @@ Public Property Get Secret(Optional ByVal MinLen As String = 4, _
         End If
     End If
 End Property
-
-
