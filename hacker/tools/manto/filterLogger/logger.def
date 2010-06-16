@@ -1,0 +1,6 @@
+
+EXPORTS
+
+	GetFilterVersion
+	HttpFilterProc
+	
