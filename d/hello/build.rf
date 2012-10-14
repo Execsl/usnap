@@ -1,0 +1,7 @@
+-od"bin"
+-of"bin/hello"
+
+-I"src"
+
+"src/array.d"
+
